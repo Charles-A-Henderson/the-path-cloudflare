@@ -27,11 +27,11 @@ const CorporateHero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-              Request a Consultation
+            <Button asChild size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+              <a href="#inquiry">Request a Consultation</a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
-              View Case Studies
+            <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+              <a href="#case-study">View Case Studies</a>
             </Button>
           </div>
         </motion.div>

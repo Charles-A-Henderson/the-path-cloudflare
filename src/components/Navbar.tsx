@@ -32,8 +32,8 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Button size="sm" className="rounded-full px-6 bg-sage text-sage-foreground hover:bg-sage/90">
-            Get Started
+          <Button asChild size="sm" className="rounded-full px-6 bg-sage text-sage-foreground hover:bg-sage/90">
+            <Link to="/programs">Get Started</Link>
           </Button>
         </div>
 
@@ -56,8 +56,8 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Button size="sm" className="w-full rounded-full bg-sage text-sage-foreground hover:bg-sage/90">
-            Get Started
+          <Button asChild size="sm" className="w-full rounded-full bg-sage text-sage-foreground hover:bg-sage/90">
+            <Link to="/programs">Get Started</Link>
           </Button>
         </div>
       )}

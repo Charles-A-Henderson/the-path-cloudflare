@@ -20,11 +20,11 @@ const TeacherHero = () => {
             Our rigorous 12-week program gives you the skills, confidence, and certification to lead meditation for individuals, groups, and organizations worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-              Apply Now
+            <Button asChild size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+              <a href="#enroll">Apply Now</a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
-              Download Syllabus
+            <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+              <a href="mailto:training@thepath.com?subject=Syllabus%20Request">Download Syllabus</a>
             </Button>
           </div>
           <p className="text-primary-foreground/60 text-sm mt-6">Scholarships available · Next cohort starts March 2026</p>

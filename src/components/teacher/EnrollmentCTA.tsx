@@ -13,7 +13,7 @@ const includes = [
 
 const EnrollmentCTA = () => {
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
+    <section id="enroll" className="py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,11 +44,11 @@ const EnrollmentCTA = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="rounded-full px-10 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-base">
-                Apply Now
+              <Button asChild size="lg" className="rounded-full px-10 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-base">
+                <a href="mailto:training@thepath.com?subject=Application%20Inquiry">Apply Now</a>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
-                Schedule a Call
+              <Button asChild size="lg" variant="outline" className="rounded-full px-10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+                <a href="mailto:training@thepath.com?subject=Schedule%20a%20Call">Schedule a Call</a>
               </Button>
             </div>
           </div>

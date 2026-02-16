@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const CaseStudy = () => {
   return (
-    <section className="py-24 bg-warm">
+    <section id="case-study" className="py-24 bg-warm">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
