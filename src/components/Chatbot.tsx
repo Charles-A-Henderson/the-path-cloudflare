@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
 import { toast } from "@/hooks/use-toast";
 
 type Message = { role: "user" | "assistant"; content: string };
@@ -186,13 +187,17 @@ const Chatbot = () => {
               {messages.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
+                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                       m.role === "user"
-                        ? "bg-sage text-sage-foreground rounded-br-md"
-                        : "bg-muted text-foreground rounded-bl-md"
+                        ? "bg-sage text-sage-foreground rounded-br-md whitespace-pre-wrap"
+                        : "bg-muted text-foreground rounded-bl-md prose prose-sm prose-headings:font-serif prose-headings:text-foreground prose-headings:mt-2 prose-headings:mb-1 prose-p:my-1 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 max-w-none"
                     }`}
                   >
-                    {m.content}
+                    {m.role === "assistant" ? (
+                      <ReactMarkdown>{m.content}</ReactMarkdown>
+                    ) : (
+                      m.content
+                    )}
                   </div>
                 </div>
               ))}
