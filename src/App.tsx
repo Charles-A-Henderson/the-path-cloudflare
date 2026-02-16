@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Programs from "./pages/Programs";
 import NotFound from "./pages/NotFound";
+import Chatbot from "@/components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <AnimatedRoutes />
+        <Chatbot />
         <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>
