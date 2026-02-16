@@ -23,7 +23,7 @@ const TeacherHero = () => {
             <Button asChild size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
               <a href="#enroll">Apply Now</a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+            <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/60 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold">
               <a href="mailto:training@thepath.com?subject=Syllabus%20Request">Download Syllabus</a>
             </Button>
           </div>
