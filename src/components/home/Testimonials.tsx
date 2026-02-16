@@ -34,11 +34,17 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-warm">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Our Community Says
           </h2>
-        </div>
+        </motion.div>
 
         <div className="relative">
           <AnimatePresence mode="wait">

@@ -31,14 +31,20 @@ const WhoItsFor = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
             Find Your Path
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Whether you want to teach, transform your team, or start a personal practice — we have a path for you.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {audiences.map((item, i) => (
@@ -46,7 +52,7 @@ const WhoItsFor = () => {
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="bg-card border border-border rounded-xl p-8 text-center hover:shadow-lg transition-shadow group"
             >

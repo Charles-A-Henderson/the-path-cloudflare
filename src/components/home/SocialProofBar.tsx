@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const stats = [
   { value: 500, suffix: "+", label: "Fortune 500 Clients" },
@@ -51,13 +52,20 @@ const SocialProofBar = () => {
     <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((stat) => (
-            <div key={stat.label} className="space-y-2">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="space-y-2"
+            >
               <Counter target={stat.value} suffix={stat.suffix} />
               <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
                 {stat.label}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
