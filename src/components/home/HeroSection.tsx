@@ -48,10 +48,10 @@ const HeroSection = () => {
           <Button asChild size="lg" className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold">
             <Link to="/teacher-training">Become a Teacher</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base font-semibold">
+          <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/60 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 text-base font-semibold">
             <Link to="/corporate">Corporate Mindfulness</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base font-semibold">
+          <Button asChild size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/60 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 text-base font-semibold">
             <Link to="/programs">Start Meditating</Link>
           </Button>
         </motion.div>
